@@ -1,0 +1,17 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink">
+<head>
+<link rel="stylesheet" href="css/aava.css"/>
+<script type="text/javascript" src="js/aava.js">
+</script>
+<script type="text/javascript">
+  function load() {
+    var data = [30,30,20,10,10];
+    var pie_chart = new PieChart("pc_div", data);
+    pie_chart.draw();
+  }
+</script>
+</head>
+<body onload="load();" >
+<div id="pc_div"></div>
+</body>
+</html>
