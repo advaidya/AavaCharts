@@ -34,9 +34,18 @@
     visibility:visible;
   }
   
+  path.above {
+    z-index:1;
+  }
+  
+  path.below {
+    z-index:-1;
+  }
+  
   text {
-    font-size:10;
+    font-size:8;
     font-family:Arial;
+    fill:white;
   }
   
   path.blue {
