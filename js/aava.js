@@ -63,15 +63,15 @@
     var pe = document.getElementById("pe" + pi.id.substring(2));
 
     pi.setAttributeNS(null,"class","internal hide");
-    pe.setAttributeNS(null,"class","external show " + PIES[pi.id].color);
+    pe.setAttributeNS(null,"class","external show above " + PIES[pi.id].color);
   }
  
   function contract(evt) {
     var pe = evt.target;
     var pi = document.getElementById("pi" + pe.id.substring(2));
 
-    pi.setAttributeNS(null,"class","internal show " + PIES[pi.id].color);
-    pe.setAttributeNS(null,"class","external hide");
+    pi.setAttributeNS(null,"class","internal show above " + PIES[pi.id].color);
+    pe.setAttributeNS(null,"class","external hide below");
   }
 
    function config(cx, cy, r) {
@@ -137,8 +137,8 @@
         this.tx = this.config.r * Math.cos(this.ar);
         this.ty = this.config.r * Math.sin(this.ar);
 
-  	this.x2 = parseInt(this.config.cx) + parseInt(this.tx);
-        this.y2 = parseInt(this.config.cy) - parseInt(this.ty);
+  	this.x2 = parseInt(this.config.cx) + this.tx;
+        this.y2 = parseInt(this.config.cy) - this.ty;
 
         this.d = "M " + this.config.cx + " " + this.config.cy + " L " + this.x1 + " " + this.y1 + " A " +  this.config.r + "," + this.config.r + " " + this.xaxisrotate + " " + this.slarcflag + "," + this.sweepflag + " " + this.x2 + "," + this.y2 + " z";
 
